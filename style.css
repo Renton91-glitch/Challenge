@@ -1,0 +1,183 @@
+/* Estilos Generales */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e6f7ff; /* Fondo azul muy claro */
+    color: #2c3e50; /* Azul oscuro para el texto */
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin: 20px;
+}
+
+/* Título Principal */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Contenedor Principal */
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Área de Texto y Alerta */
+.text-container {
+    margin-bottom: 20px;
+}
+
+.text {
+    width: 100%;
+    border: 1px solid #3498db; /* Borde azul */
+    background-color: #e6f7ff; /* Fondo azul claro */
+    color: #2c3e50; /* Texto azul oscuro */
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.text::placeholder {
+    color: #3498db; /* Azul más intenso para el placeholder */
+    opacity: 0.7;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #3498db; /* Azul para texto de alerta */
+}
+
+.alert img {
+    width: 24px;
+    height: auto;
+}
+
+/* Botones */
+.button-container,
+.copy-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="button"] {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #2c3e50;
+    background-color: #3498db; /* Fondo azul para botones primarios */
+    color: #ffffff;
+}
+
+input[type="button"]:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+}
+
+.btn-limpiar {
+    background-color: #b3d1ff; /* Azul claro para el botón limpiar */
+    color: #2c3e50;
+    border: 1px solid #2c3e50;
+}
+
+.btn-limpiar:hover {
+    background-color: #99c2ff; /* Azul más oscuro al pasar el mouse sobre limpiar */
+    color: #1a252f;
+}
+
+/* Estilización de la Sección Dos */
+.section-two {
+    background: #ffffff; /* Fondo blanco para una apariencia limpia */
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto del Resultado */
+.result-container p {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Elementos Ocultos */
+.ocultar {
+    display: none;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #3498db; /* Pie de página azul */
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+/* Consultas de Medios para Diseño Responsivo */
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container,
+    .copy-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-two {
+        margin-top: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    input[type="button"] {
+        width: 90%;
+        height: 45px;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .alert {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
